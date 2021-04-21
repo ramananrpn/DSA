@@ -1,3 +1,3 @@
 # DSA
 
-This Repo contains Solutions for DS & Algo Competitive Programming Question which Im practiving for improving problem solving skills arranged with Question-URL-Solution.
+This Repo contains Solutions for Data-Stuctures & Algo Competitive Programming Problems which Im practicing for improving problem solving skills arranged with Question-URL-Solution.
