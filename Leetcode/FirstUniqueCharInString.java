@@ -21,7 +21,7 @@
 //        s consists of only lowercase English letters.
 
 import java.util.HashMap;
-class Solution {
+class FirstUniqueChar {
     public int firstUniqChar(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         for(int i = s.length()-1; i>=0; i--) {
