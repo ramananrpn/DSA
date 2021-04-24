@@ -1,4 +1,4 @@
-
+package string;
 /*
 * https://leetcode.com/problems/word-pattern/
 * */

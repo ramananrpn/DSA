@@ -1,3 +1,5 @@
+package string;
+
 /*
 * https://leetcode.com/problems/first-unique-character-in-a-string/
 */
