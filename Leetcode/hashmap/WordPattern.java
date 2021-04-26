@@ -1,4 +1,4 @@
-package string;
+package hashmap;
 /*
 * https://leetcode.com/problems/word-pattern/
 * */
