@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 /* https://leetcode.com/problems/permutation-in-string/ */
 
+//TAGS : sliding_window, hashmap
 
 /*
 * Given two strings s1 and s2, return true if s2 contains the permutation of s1.
