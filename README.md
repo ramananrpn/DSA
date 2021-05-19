@@ -4,8 +4,19 @@ This Repo contains Solutions for Data-Stuctures & Algo Competitive Programming P
 
 Tags:
 --
-* sliding_window
-* trie
-* revisit
+* ***Topics***
+    * sliding_window
+    * trie
+
+* ***Companies***
+    * google
+    
+* ***Difficulty***
+    * easy
+    * medium
+    * hard
+    
+* ***General***
+    * revisit
 
 
