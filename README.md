@@ -7,6 +7,7 @@ Tags:
 * ***Topics***
     * sliding_window
     * trie
+    * two_pointers
 
 * ***Companies***
     * google
