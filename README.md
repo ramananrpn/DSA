@@ -8,10 +8,15 @@ Tags:
     * sliding_window
     * trie
     * two_pointers
+    * sort
 
 * ***Companies***
     * google
     * facebook
+    * apple
+    * oracle
+    * amazon
+    * adobe
     
 * ***Difficulty***
     * easy
