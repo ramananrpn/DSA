@@ -9,6 +9,7 @@ Tags:
     * trie
     * two_pointers
     * sort
+    * merge_sort
 
 * ***Companies***
     * google
