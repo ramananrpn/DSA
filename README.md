@@ -10,6 +10,7 @@ Tags:
     * two_pointers
     * sort
     * merge_sort
+    * bit_shift
 
 * ***Companies***
     * google

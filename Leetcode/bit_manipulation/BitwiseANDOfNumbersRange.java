@@ -2,6 +2,8 @@ package bit_manipulation;
 // https://leetcode.com/problems/bitwise-and-of-numbers-range/
 // solution : https://gist.github.com/ramananrpn/69e2f91fcf85274e134af7f0f30976eb
 
+// tags: adobe, amazon, easy, brian-kernighans-algorithm, bit_shift
+
 /*
 * Given two integers left and right that represent the range [left, right], return the bitwise AND of all numbers in this range, inclusive.
 Example 1:
