@@ -11,6 +11,7 @@ Tags:
     * sort
     * merge_sort
     * bit_shift
+    * binary_search
 
 * ***Companies***
     * google
