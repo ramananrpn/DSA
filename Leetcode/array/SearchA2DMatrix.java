@@ -51,6 +51,12 @@ Write an efficient algorithm that searches for a value in an m x n matrix. This 
 
 // ----------------------BINARY SEARCH----------------------
 
+/* HINT :
+idx = low + high / 2; // mid
+row = idx / n
+col = idx % n
+*/
+
 class SearchA2DMatrixBinarySearch {
     public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length;
