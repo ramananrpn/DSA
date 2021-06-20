@@ -1,7 +1,7 @@
 package array;
 
 // https://leetcode.com/problems/sort-array-by-parity/
-// tags: easy, google, facebook, capital_one
+// tags: easy, google, facebook, capital_one, two_pointer
 
 /*
 Given an array nums of non-negative integers, return an array consisting of all the even elements of nums, followed by all the odd elements of nums.
