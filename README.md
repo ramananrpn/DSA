@@ -20,6 +20,11 @@ Tags:
     * oracle
     * amazon
     * adobe
+    * flipkart
+    * microsoft
+    * goldman_sachs
+    * linked_in
+    * paypal
     
 * ***Difficulty***
     * easy
