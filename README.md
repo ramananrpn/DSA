@@ -12,6 +12,8 @@ Tags:
     * merge_sort
     * bit_shift
     * binary_search
+    * data_stream
+    * priority_queue
 
 * ***Companies***
     * google
