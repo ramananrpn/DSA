@@ -4,6 +4,8 @@ package permutation_combination;
 
 // TAGS : medium, bit_masking, facebook, google , amazon, uber, goldman_sachs
 
+// array nums of unique elements, all possible sub-arrays
+
 /*
 * Given an integer array nums of unique elements, return all possible subsets (the power set).
 
