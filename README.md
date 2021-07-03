@@ -14,6 +14,7 @@ Tags:
     * binary_search
     * data_stream
     * priority_queue
+    * treemap
 
 * ***Companies***
     * google
@@ -25,7 +26,7 @@ Tags:
     * flipkart
     * microsoft
     * goldman_sachs
-    * linked_in
+    * linkedin
     * paypal
     
 * ***Difficulty***
