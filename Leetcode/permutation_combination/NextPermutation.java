@@ -1,6 +1,7 @@
 package permutation_combination;
 
 //https://leetcode.com/problems/next-permutation/
+// tags: medium, permutation, facebook, amazon, google apple, microsoft, adobe, goldman_sachs
 
 /*
 Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
