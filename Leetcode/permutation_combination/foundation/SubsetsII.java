@@ -1,4 +1,4 @@
-package permutation_combination;
+package permutation_combination.foundation;
 
 // https://leetcode.com/problems/subsets-ii/
 

@@ -1,10 +1,12 @@
-package permutation_combination;
+package permutation_combination.foundation;
 
 // https://leetcode.com/problems/subsets/
 
 // TAGS : medium, bit_masking, facebook, google , amazon, uber, goldman_sachs
 
 // array nums of unique elements, all possible sub-arrays
+
+// FORMULA : 2^n
 
 /*
 * Given an integer array nums of unique elements, return all possible subsets (the power set).

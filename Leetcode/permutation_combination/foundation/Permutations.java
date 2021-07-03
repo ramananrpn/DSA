@@ -1,4 +1,4 @@
-package permutation_combination;
+package permutation_combination.foundation;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,6 +6,12 @@ import java.util.List;
 
 // https://leetcode.com/problems/permutations/
 // TAGS : medium, heaps_algorithm, backtracking, amazon, facebook , paypal, linkedin, microsoft, ebay
+
+
+// PERMUTATION FORMULA : n! / (n-r)!
+// if r is different
+// FORMULA  = n!
+// note factorial of zero is 1
 
 /*
 * Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
