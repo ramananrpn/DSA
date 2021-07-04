@@ -38,4 +38,6 @@ Tags:
     * revisit
   
 * ***(Algorithm names)***
+    * brian-kernighans-algorithm
+    * heaps_algorithm
 
