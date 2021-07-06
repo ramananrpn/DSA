@@ -38,6 +38,7 @@ Tags:
     * revisit
   
 * ***(Algorithm names)***
-    * brian-kernighans-algorithm
+    * brian_kernighans_algorithm
     * heaps_algorithm
+    * fractional_knapsack
 
