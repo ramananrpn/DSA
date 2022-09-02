@@ -66,3 +66,29 @@ class TwoPointer {
 }
 
 // Time Complexity: O(N)
+
+/*
+class TwoPointer {
+    public int[] sortedSquares(int[] nums) {
+        int low = 0, high = nums.length-1;
+
+        int[] result = new int[nums.length];
+
+        int index = high;
+
+        while(low <= high) {
+            int lowSquare = nums[low] * nums[low];
+            int highSquare = nums[high] * nums[high];
+
+            if(lowSquare >= highSquare) {
+                result[index--] = lowSquare;
+                low++;
+            }
+            else {
+                result[index--] = highSquare;
+                high--;
+            }
+        }
+        return result;
+    }
+}*/
