@@ -15,6 +15,7 @@ Tags:
     * data_stream
     * priority_queue
     * treemap
+    * rotation
 
 * ***Companies***
     * google
