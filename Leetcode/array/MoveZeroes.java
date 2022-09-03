@@ -71,7 +71,7 @@ public class MoveZeroes {
         int pointer = 0;
         int runner = pointer + 1;
 
-        while (pointer < nums.length-1) {
+        while (pointer < nums.length-1 && runner < nums.length) {
             if(nums[pointer] != 0) {
                 pointer++;
                 runner++;
@@ -85,6 +85,7 @@ public class MoveZeroes {
                 }
                 swap(nums, pointer, runner);
                 pointer++;
+                runner++;
             }
         }
     }
