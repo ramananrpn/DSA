@@ -16,6 +16,11 @@ Example 2:
 Input: nums = [0]
 Output: [0]
 
+Test Cases :
+* [4,2,4,0,0,3,0,5,1,0]
+* [1, 2]
+* [2, 1]
+* [1, 0]
 
 Constraints:
 
@@ -29,7 +34,7 @@ Follow up: Could you minimize the total number of operations done?
 // TAGS : easy, array_transformation
 
 // own code BRUTE FORCE
-public class MoveZeroes {
+/*public class MoveZeroes {
     public void moveZeroes(int[] nums) {
         if(nums.length == 1) return;
 
@@ -48,6 +53,39 @@ public class MoveZeroes {
                 swap(nums, pointer, runner);
             }
             pointer++;
+        }
+    }
+
+    void swap(int[] nums, int low, int high) {
+        int temp = nums[low];
+        nums[low] = nums[high];
+        nums[high] = temp;
+    }
+}*/
+
+// OWN CODE OPTIMISED
+public class MoveZeroes {
+    public void moveZeroes(int[] nums) {
+        if(nums.length == 1) return;
+
+        int pointer = 0;
+        int runner = pointer + 1;
+
+        while (pointer < nums.length-1) {
+            if(nums[pointer] != 0) {
+                pointer++;
+                runner++;
+            }
+            else if(nums[pointer] == 0 && pointer < nums.length-1) {
+                while(nums[runner] == 0) {
+                    runner++;
+                    if(runner==nums.length) {
+                        return;
+                    }
+                }
+                swap(nums, pointer, runner);
+                pointer++;
+            }
         }
     }
 
