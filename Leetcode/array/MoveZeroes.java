@@ -96,3 +96,51 @@ public class MoveZeroes {
         nums[high] = temp;
     }
 }
+
+
+// Leetcode solution
+// O(n)
+/*class MoveZeroes {
+    public void moveZeroes(int[] nums) {
+        int curIndex = 0;
+
+        // block to append elements continuously if it is non-zero
+        for(int i = 0 ; i < nums.length ; i++) {
+            if(nums[i] != 0) {
+                nums[curIndex++] = nums[i];
+            }
+        }
+
+
+        // append with zero for remaining indices
+        for(int i = curIndex ; i < nums.length; i++) {
+            nums[i] = 0;
+        }
+    }
+}*/
+
+// LEETCODE SOLUTION WITH SWAPING
+// O(n)
+/*
+class MoveZeroes {
+    public void moveZeroes(int[] nums) {
+        for(int nonZeroIndex = 0, runner = 0 ; runner < nums.length ; runner++) {
+            if(nums[runner] != 0) {
+                swap(nums, nonZeroIndex, runner);
+                nonZeroIndex++;
+            }
+        }
+    }
+
+    void swap(int[] nums, int low, int high) {
+        if(low==high) {
+            return;
+        }
+
+        int temp = nums[low];
+        nums[low] = nums[high];
+        nums[high] = temp;
+    }
+}
+*/
+
