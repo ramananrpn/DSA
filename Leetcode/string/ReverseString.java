@@ -64,6 +64,7 @@ class ReverseString {
 // same time-complexity
 //https://leetcode.com/problems/reverse-string/discuss/670472/Simplest-2-line-Java-solution
 
+// technique
 class ReverseStringUsingXOR {
     public void reverseString(char[] s) {
         for (int i = 0, len = s.length, end = len - 1; i < len / 2; i++)
