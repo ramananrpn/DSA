@@ -65,6 +65,7 @@ class ReverseString {
 //https://leetcode.com/problems/reverse-string/discuss/670472/Simplest-2-line-Java-solution
 
 // technique
+// This utilizes a 1-line XOR swap method that also doesn't require a temporary variable while swapping. Java complains that it might be lossy so you have to cast back to char at the end. It's exactly the same process as the given solution, it just uses a different swapping technique.
 class ReverseStringUsingXOR {
     public void reverseString(char[] s) {
         for (int i = 0, len = s.length, end = len - 1; i < len / 2; i++)
