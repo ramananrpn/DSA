@@ -26,34 +26,49 @@ Example 3:
 Input: numbers = [-1,0], target = -1
 Output: [1,2]
 Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
+
+[-1,0]
+-1
+
+[5,25,75]
+100
+
+[0, 0, 2, 5]
+0
  */
 
 
 // OWN CODE
-// not accepted
 public class TwoSumII_InputArrayIsSorted {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
-        for(int i = 0 ; i < nums.length-1; i++) {
-            if(nums[i] >= target) {
-                return result;
+
+        for(int i = 0 ; i < nums.length - 1; i++) {
+            int rem = target - nums[i];
+
+            // array is sorted, so if rem is greater than last num
+            // rem will be exist, so incrementing i (continue)
+            if (rem > nums[nums.length-1]) {
+                continue;
             }
 
-            int rem = target - nums[i];
-            int mid, start = i, end = nums.length;
+            int mid, start = i, end = nums.length - 1;
+
+            // using binary search as the array is sorted
             do {
                 mid = start + (end - start) / 2;
-                if( nums[mid] > rem) {
+
+                if (nums[mid] < rem || mid == i) {
+                    start = mid+1;
+                }
+
+                else if( nums[mid] > rem) {
                     end = mid - 1;
                 }
                 else if(nums[mid] == rem) {
                     result[0] = i+1;
                     result[1] = mid+1;
                     return result;
-                }
-
-                else if (nums[mid] < rem) {
-                    start = mid+1;
                 }
             } while(end >= start);
         }
