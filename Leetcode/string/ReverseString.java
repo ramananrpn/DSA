@@ -29,6 +29,7 @@ class ReverseString {
 
         while(left < right){
             if(s[left] != s[right]){
+                // swap
                 char temp = s[left];
                 s[left] = s[right];
                 s[right] = temp;
