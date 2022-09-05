@@ -37,8 +37,11 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 0
  */
 
+// TAGS: medium, binary_search, two_pointer
+
 
 // OWN CODE
+/*
 public class TwoSumII_InputArrayIsSorted {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
@@ -75,3 +78,31 @@ public class TwoSumII_InputArrayIsSorted {
         return result;
     }
 }
+*/
+
+
+// OPTIMAL
+// TWO_POINTERS
+public class TwoSumII_InputArrayIsSorted {
+    public int[] twoSum(int[] nums, int target) {
+        int left = 0 , right = nums.length-1;
+
+        while (left < right) {
+            int sum = nums[left] + nums[right];
+            if (sum == target) {
+                break;
+            }
+
+            if (sum > target) {
+                right--;
+            }
+
+            else if (sum < target) {
+                left++;
+            }
+        }
+
+        return new int[] {left+1, right +1};
+    }
+}
+
