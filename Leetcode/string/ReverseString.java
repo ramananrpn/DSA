@@ -2,8 +2,6 @@ package string;
 
 // https://leetcode.com/problems/reverse-string/
 
-// TAGS : easy, two_pointers
-
 /*
 * Write a function that reverses a string. The input string is given as an array of characters s.
 
@@ -22,6 +20,8 @@ Constraints:
 1 <= s.length <= 105
 s[i] is a printable ascii character.
 * */
+
+// TAGS : easy, two_pointers
 
 class ReverseString {
     public void reverseString(char[] s) {
