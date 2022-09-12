@@ -28,7 +28,6 @@ Explanation: The last word is "joyboy" with length 6.
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
         char[] str = s.toCharArray();
-
         int count = 0;
 
         for(int i = str.length - 1 ; i>=0 ; i --) {
@@ -40,7 +39,6 @@ public class LengthOfLastWord {
             }
             count++;
         }
-
         return count;
     }
 }
