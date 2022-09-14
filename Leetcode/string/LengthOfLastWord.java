@@ -24,7 +24,6 @@ Explanation: The last word is "joyboy" with length 6.
 * */
 
 // TAGS : easy
-
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
         char[] str = s.toCharArray();
