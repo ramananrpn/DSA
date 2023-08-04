@@ -44,13 +44,10 @@ public class LongestAlternatingSubarray {
             for(int j = i+1 ; j < nums.length ;) {
                 // odd (start) -> 1
                 if(flag % 2 != 0) {
-                    System.out.println("odd - " + k + " , " + j);
                     if(nums[j] - nums[k] == 1) {
-                        System.out.println("odd incre");
                         j++;
                         k++;
                         count++;
-                        System.out.println("odd incre - " + count);
                     }
                     else {
                         break;
