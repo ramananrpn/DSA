@@ -43,4 +43,6 @@ Tags:
     * brian_kernighans_algorithm
     * heaps_algorithm
     * fractional_knapsack
+* ***self***
+  * consider_interview_easy
 
