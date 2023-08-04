@@ -6,4 +6,5 @@ https://www.scaler.com/topics/data-structures/ford-fulkerson-algorithm-for-maxim
 https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
  */
 public class FordFulkerson {
+    // practice algorithm
 }
