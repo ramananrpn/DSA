@@ -42,32 +42,20 @@ public class LongestAlternatingSubarray {
             int flag = 1;
             int count = 1;
             for(int j = i+1 ; j < nums.length ;) {
-                // odd (start) -> 1
-                if(flag % 2 != 0) {
-                    if(nums[j] - nums[k] == 1) {
-                        j++;
-                        k++;
-                        count++;
-                    }
-                    else {
-                        break;
-                    }
+                // odd (start) -> 1 || even -> -1
+                if((flag % 2 != 0 && nums[j] - nums[k] == 1) ||
+                        (flag % 2 == 0 && nums[j] - nums[k] == -1)) {
+                    j++;
+                    k++;
+                    count++;
                 }
-                // even -> -1
-                if(flag % 2 == 0) {
-                    if(nums[j] - nums[k] == -1) {
-                        j++;
-                        k++;
-                        count++;
-                    }
-                    else {
-                        break;
-                    }
+                else {
+                    break;
                 }
                 flag++;
-                if (count > max) {
-                    max = count;;
-                }
+            }
+            if (count > 1 && count > max) {
+                max = count;
             }
         }
         return max;
