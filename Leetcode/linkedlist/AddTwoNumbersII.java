@@ -1,4 +1,6 @@
 package linkedlist;
+
+import java.util.Stack;
 // 445. Add Two Numbers II
 /*
 ou are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
@@ -30,9 +32,8 @@ https://leetcode.com/problems/add-two-numbers-ii/description/
 Tags: linked_list, medium, stack
 */
 
-
-// Reversing the linked list
-public class AddTwoNumbersII {
+//----------------------- Reversing the linked list---------------------------------------
+class AddTwoNumbersIIUsingReversing {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         l1 = reverse(l1);
         l2 = reverse(l2);
@@ -94,6 +95,41 @@ public class AddTwoNumbersII {
     }
 }
 
+//-----------------------Using Stack----------------------------------------------
+
+// Using
+class AddTwoNumbersIIUsingStack {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        Stack<Integer> s1 = new Stack<>();
+        Stack<Integer> s2 = new Stack<>();
+
+        while(l1 != null) {
+            s1.push(l1.val);
+            l1 = l1.next;
+        }
+
+        while(l2 != null) {
+            s2.push(l2.val);
+            l2 = l2.next;
+        }
+
+        int carry = 0;
+        ListNode result = null;
+        while(!s1.isEmpty() || !s2.isEmpty() || carry != 0) {
+            int val1 = !s1.isEmpty() ? s1.pop() : 0;
+            int val2 = !s2.isEmpty() ? s2.pop() : 0;
+
+            int sum = (val1 + val2 + carry) % 10;
+            carry = (val1 + val2 + carry) / 10;
+
+            ListNode newNode = new ListNode(sum);
+            newNode.next = result;
+            result = newNode;
+        }
+
+        return result;
+    }
+}
 
 /**
  * Definition for singly-linked list.
