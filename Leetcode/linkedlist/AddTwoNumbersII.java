@@ -62,7 +62,6 @@ class AddTwoNumbersIIUsingReversing {
                 l2 = l2.next;
             }
         }
-
         return result;
     }
 
