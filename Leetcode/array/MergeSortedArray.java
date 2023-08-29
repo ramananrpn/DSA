@@ -55,6 +55,7 @@ class ThreePointers {
         int p2 = n-1;
 
         for(int runner = m+n-1 ; runner >= 0 ; runner--){
+//            p1 < 0 is needed for the case nums = {0}, m = 0
             if( p1 < 0 || p2 >= 0 && nums2[p2] > nums1[p1]){
                 nums1[runner] = nums2[p2--];
             }
