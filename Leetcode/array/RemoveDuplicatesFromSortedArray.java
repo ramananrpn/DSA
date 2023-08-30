@@ -47,6 +47,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 // OWN CODE
 public class RemoveDuplicatesFromSortedArray {
+    // own solution
     public int removeDuplicates(int[] nums) {
         if(nums.length == 1) {
             return 1;
@@ -69,4 +70,28 @@ public class RemoveDuplicatesFromSortedArray {
 
         return resultCount;
     }
+
+    // ----------------------------------------
+
+    // own solution
+    public int removeDuplicatesTwoPointer(int[] nums) {
+        if(nums.length == 0) {
+            return 0;
+        }
+        int cur = nums[0];
+        int pointer = 1, runner = 1;
+
+        while(runner < nums.length) {
+            if(nums[runner] < cur) {
+                break;
+            }
+            if(nums[runner] != cur) {
+                cur = nums[runner];
+                nums[pointer++] = cur;
+            }
+            runner++;
+        }
+        return pointer;
+    }
 }
+
