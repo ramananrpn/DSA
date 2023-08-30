@@ -1,7 +1,7 @@
-package dynamic_programming;
+package array;
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description
-// TAGS: array, easy
+// TAGS: array, easy, dynamic_programming
 
 /*
 You are given an array prices where prices[i] is the price of a given stock on the ith day.

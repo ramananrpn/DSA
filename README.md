@@ -17,6 +17,7 @@ Tags:
     * treemap
     * rotation
     * array_transformation
+    * dynamic_programming
 
 * ***Companies***
     * google
