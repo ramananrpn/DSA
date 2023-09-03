@@ -13,11 +13,16 @@ Tags:
     * bit_shift
     * binary_search
     * data_stream
-    * priority_queue
-    * treemap
     * rotation
     * array_transformation
     * dynamic_programming
+    * treeset
+    * dfs
+
+* ***DS***
+  * priority_queue
+  * treemap
+  * treeset
 
 * ***Companies***
     * google
