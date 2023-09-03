@@ -23,7 +23,7 @@ The number of nodes in the tree is n.
 
 * */
 
-// TAGS: medium, dfs
+// TAGS: medium, dfs, top_interview_150
 public class KthSmallestElementInABST {
     public int kthSmallest(TreeNode root, int k) {
         ArrayList<Integer> list = new ArrayList<>();
