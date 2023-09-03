@@ -52,3 +52,32 @@ public class RotateArray {
         nums[end] = temp;
     }
 }
+
+// -----------------------------------------------
+
+// own solution
+class RotateArrayOwnSolution {
+    public void rotate(int[] nums, int k) {
+        k = k%nums.length;  // 3%7 == 3
+
+        int[] res = new int[nums.length];
+        int index = 0;
+
+        // adding till length -k (7-3 = 4) from last
+        // [1, 2, 3, 4, 5, 6, 7] -> res -> [7, 6, 5, 0, 0, 0, 0]
+        for(int i = nums.length - k; i < nums.length ; i++) {
+            res[index++] = nums[i];
+        }
+
+        // addding elements back till length - k (7-3 = 4)
+        // [1, 2, 3, 4, 5, 6, 7] -> res  [7, 6, 5, 0, 0, 0, 0]
+        // [1, 2, 3, 4, 5, 6, 7] -> res  [7, 6, 5, 1, 2, 3, 4]
+        for(int i = 0; i < nums.length - k; i++) {
+            res[index++] = nums[i];
+        }
+
+        for(int i = 0 ; i < nums.length ; i++) {
+            nums[i] = res[i];
+        }
+    }
+}
