@@ -54,7 +54,7 @@ class ValidAnagramUsingHashMap {
 
 // ------------------------------------------------
 
- class ValidAnagramUsingCollection {
+class ValidAnagramUsingCollection {
     public boolean isAnagram(String s, String t) {
         char[] sChars = s.toCharArray();
         char[] tChars = t.toCharArray();
