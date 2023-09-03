@@ -1,0 +1,51 @@
+package array;
+
+// https://leetcode.com/problems/jump-game-ii/description
+
+// TAGS: medium, top_interview_150
+
+/*
+You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].
+
+Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at nums[i], you can jump to any nums[i + j] where:
+
+0 <= j <= nums[i] and
+i + j < n
+Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].
+
+Example 1:
+Input: nums = [2,3,1,1,4]
+Output: 2
+Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.
+
+Example 2:
+Input: nums = [2,3,0,1,4]
+Output: 2
+
+* */
+public class JumpGameII {
+    public int jump(int[] nums) {
+        if(nums.length == 1) return 0;
+
+        int reachable = 0, count = 0, end = 0;
+        for (int i = 0 ; i < nums.length; i++) {
+            if(i + nums[i] > reachable) {
+                reachable = i + nums[i];
+            }
+
+            // [2,3,1,1,4]
+            if(reachable >= nums.length -1) {
+                return count+1;
+            }
+
+            // incrementing count once for each initial max value
+            // [4, 2, 6, 4, 2, 0, 1, 1] -> for index 0 -> 4 , count will be 1
+            // in case of we could reach in mid there 6 instead of 2 in index 1, we will     increment in above block when if reaches end in mid (because we do additional jump)
+            if(i == end) {
+                count++;
+                end = reachable;
+            }
+        }
+        return count;
+    }
+}
