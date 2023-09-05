@@ -41,3 +41,27 @@ public class LengthOfLastWord {
         return count;
     }
 }
+
+//--------------------------------------------------------
+
+// own solution
+class LengthOfLastWordWithWhile {
+    public int lengthOfLastWord(String s) {
+        int len = s.length()-1;
+
+        int count = 0;
+
+        char[] ch = s.toCharArray();
+
+        while(len >= 0 && ch[len] == ' '){
+            len--;
+        }
+
+        while(len>= 0 && ch[len] != ' ') {
+            len--;
+            count++;
+        }
+
+        return count;
+    }
+}
