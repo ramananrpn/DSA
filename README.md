@@ -18,6 +18,8 @@ Tags:
     * dynamic_programming
     * treeset
     * dfs
+    * doubly_linked_list
+    * hashing
 
 * ***DS***
   * priority_queue
