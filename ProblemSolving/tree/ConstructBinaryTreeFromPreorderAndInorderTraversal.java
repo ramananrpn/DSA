@@ -81,7 +81,7 @@ class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 }
 
 // ---------------------Optimised without HASH MAP -----------------------
-
+// fastest
 class ConstructBinaryTreeFromPreorderAndInorderTraversalOptimised {
     int p = 0, i = 0;
     public TreeNode buildTree(int[] preorder, int[] inorder) {
