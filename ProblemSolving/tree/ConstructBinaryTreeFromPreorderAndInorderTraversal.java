@@ -79,3 +79,27 @@ class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         return treeNode;
     }
 }
+
+// ---------------------Optimised without HASH MAP -----------------------
+
+class ConstructBinaryTreeFromPreorderAndInorderTraversalOptimised {
+    int p = 0, i = 0;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return constructTree(preorder, inorder, Integer.MIN_VALUE);
+    }
+
+    private TreeNode constructTree(int[] pre, int[] in, int stop) {
+        if(p >= pre.length || in[i] == stop) {
+            if(p < pre.length) i++;
+
+            return null;
+        }
+
+        TreeNode node = new TreeNode(pre[p]);
+        p++;
+        node.left = constructTree(pre, in, node.val);
+        node.right = constructTree(pre, in, stop);
+
+        return node;
+    }
+}
