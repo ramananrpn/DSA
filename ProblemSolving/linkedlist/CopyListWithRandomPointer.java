@@ -124,3 +124,94 @@ class Node {
         this.random = null;
     }
 }
+
+//---------- TEMPLATE ------------
+/*
+import java.util.HashMap;
+import java.util.Map;
+
+class Node {
+    int val;
+    Node next;
+    Node random;
+
+    public Node(int val) {
+        this.val = val;
+        this.next = null;
+        this.random = null;
+    }
+}
+
+class LinkedListCopy {
+     Map<Node, Node> mappingMap = new HashMap<>();
+
+    public Node copyRandomList(Node head) {
+        if(head == null) {
+            return null;
+        }
+        Node newNode;
+        if(mappingMap.containsKey(head)) {
+            return mappingMap.get(head);
+        }
+        else {
+            newNode = new Node(head.val);
+            mappingMap.put(head, newNode);
+        }
+
+        newNode.next = copyRandomList(head.next);
+        newNode.random = copyRandomList(head.random);
+
+        return newNode;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Create a sample linked list with random pointers
+        Node node1 = new Node(10);
+        Node node2 = new Node(5);
+        Node node3 = new Node(16);
+        Node node4 = new Node(35);
+        Node node5 = new Node(2);
+        Node node6 = new Node(4);
+
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+        node5.next = node6;
+
+        node1.random = null;
+        node2.random = node3;
+        node3.random = node1;
+        node4.random = node6;
+        node5.random = node2;
+        node6.random = node5;
+
+        // Call the method to create a deep copy of the linked list
+        LinkedListCopy solution = new LinkedListCopy();
+        Node copiedHead = solution.copyRandomList(node1);
+
+        // Print the original and copied linked lists for verification
+        printList("Original linked list:", node1);
+        printList("Copied linked list:", copiedHead);
+    }
+
+    private static void printList(String title, Node head) {
+        System.out.println(title);
+    Node cur = head;
+    while (cur != null) {
+        System.out.print("[" + cur.val + " -> ");
+        if (cur.random != null) {
+            System.out.print(cur.random.val);
+        } else {
+            System.out.print("null");
+        }
+        System.out.print("] ");
+        cur = cur.next;
+    }
+    System.out.println();
+}
+}
+* */
