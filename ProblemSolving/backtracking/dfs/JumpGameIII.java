@@ -1,4 +1,4 @@
-package dfs;
+package backtracking.dfs;
 
 // https://leetcode.com/problems/jump-game-iii/description/
 

@@ -1,4 +1,4 @@
-package dfs;
+package backtracking.dfs;
 
 import java.util.HashMap;
 import java.util.List;
