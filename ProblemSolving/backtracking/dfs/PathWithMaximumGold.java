@@ -50,13 +50,15 @@ There are at most 25 cells containing gold.
 class PathWithMaximumGold {
   public int getMaximumGold(int[][] grid) {
     int maxGold = 0;
+    int row = grid.length;
+    int col = grid[0].length;
 
     // Iterate over every cell in the grid to start DFS if the cell contains gold (>0)
-    for (int i = 0; i < grid.length; i++) {
-      for (int j = 0; j < grid[0].length; j++) {
+    for (int i = 0; i < row; i++) {
+      for (int j = 0; j < col; j++) {
         if (grid[i][j] > 0) {
           // Start DFS from each cell with gold and update maxGold
-          maxGold = Math.max(maxGold, collectGold(grid, i, j));
+          maxGold = Math.max(maxGold, collectGold(grid, i, j, row, col));
         }
       }
     }
@@ -65,9 +67,9 @@ class PathWithMaximumGold {
   }
 
   // DFS helper function to collect gold from the current cell
-  private int collectGold(int[][] grid, int x, int y) {
+  private int collectGold(int[][] grid, int x, int y, int row, int col) {
     // If out of bounds or cell has no gold, return 0
-    if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == 0) {
+    if (x < 0 || x >= row || y < 0 || y >= col || grid[x][y] == 0) {
       return 0;
     }
 
@@ -78,10 +80,10 @@ class PathWithMaximumGold {
     grid[x][y] = 0;
 
     // Explore all four directions
-    int left = collectGold(grid, x, y - 1);
-    int right = collectGold(grid, x, y + 1);
-    int up = collectGold(grid, x - 1, y);
-    int down = collectGold(grid, x + 1, y);
+    int left = collectGold(grid, x, y - 1, row, col);
+    int right = collectGold(grid, x, y + 1, row, col);
+    int up = collectGold(grid, x - 1, y, row, col);
+    int down = collectGold(grid, x + 1, y, row, col);
 
     // Find the maximum gold collected from all paths starting from this cell
     int maxGoldFromHere = goldCollected + Math.max(Math.max(left, right), Math.max(up, down));
