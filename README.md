@@ -53,5 +53,7 @@ Tags:
     * fractional_knapsack
 * ***self***
   * consider_interview_easy
+  * consider_interview_medium
+  * consider_interview_hard
   * top_interview_150
 
