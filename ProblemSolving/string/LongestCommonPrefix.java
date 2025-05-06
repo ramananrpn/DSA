@@ -39,3 +39,58 @@ public class LongestCommonPrefix {
 
     }
 }
+
+// ----------------------------------------------------------------------
+// Horizontal scanning
+// O(n)
+
+class LongestCommonPrefixHorizontalScanning {
+    public String longestCommonPrefix(String[] strs) {
+        String prefix = strs[0];
+
+        for(int i = 1 ; i < strs.length; i++ ) {
+            while(!strs[i].startsWith(prefix)) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+
+                if (prefix.isEmpty()) {
+                    return "";
+                }
+            }
+        }
+
+        return prefix;
+    }
+}
+
+// ----------------------------------------------------------------------
+// Divide and Conquer
+// O(log n)
+class LongestCommonPrefixDivideAndConquer {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+        return findCommonPrefix(strs, 0, strs.length - 1);
+    }
+
+    private String findCommonPrefix(String[] strs, int left, int right) {
+        if (left == right) {
+            return strs[left];
+        }
+
+        int mid = (left + right) / 2;
+        String lcpLeft = findCommonPrefix(strs, left, mid);
+        String lcpRight = findCommonPrefix(strs, mid + 1, right);
+        return commonPrefix(lcpLeft, lcpRight);
+    }
+
+    private String commonPrefix(String left, String right) {
+        int minLength = Math.min(left.length(), right.length());
+        for (int i = 0; i < minLength; i++) {
+            if (left.charAt(i) != right.charAt(i)) {
+                return left.substring(0, i);
+            }
+        }
+        return left.substring(0, minLength);
+    }
+}
