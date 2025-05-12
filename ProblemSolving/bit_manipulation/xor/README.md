@@ -31,3 +31,21 @@ x = x^y;
 y = x^y;
 
 x = x^y;
+
+XOR (^) Operator
+Returns 1 only when the bits are different.
+Think: “Is exactly one switch ON?”
+
+🧠 Truth Table:
+A	B	A ^ B
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+
+🔧 Example:
+A = 5 = 0101
+B = 3 = 0011
+A ^ B =     0110 → 6
+
+ # ------------------------------ #
