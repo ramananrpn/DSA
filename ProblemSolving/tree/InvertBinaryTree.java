@@ -55,6 +55,3 @@ public class InvertBinaryTree {
  *     }
  * }
  */
-class Solution {
-
-}
