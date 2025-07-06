@@ -39,7 +39,7 @@ Given two 2D points A(x1, y1) and B(x2, y2):
 
 👉 The actual distance is:
 
-\text{distance} = \sqrt{(x2 - x1)^2 + (y2 - y1)^2}
+distance  = √((x2−x1)² + (y2−y1)²)
 
 This is what you learn in school as the distance between two points on a plane.
 
@@ -53,7 +53,8 @@ Because in many coding problems (like detecting a square), you’re only interes
 
 ✅ So instead, we use squared distance:
 
-\text{distance}^2 = (x2 - x1)^2 + (y2 - y1)^2
+distance  = √((x2−x1)² + (y2−y1)²)
+(distance)² = (x2 - x1)² + (y2 - y1)²
 
 You skip the square root — but the relative values stay the same.
 
