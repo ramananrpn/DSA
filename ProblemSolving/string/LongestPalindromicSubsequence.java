@@ -1,4 +1,4 @@
-package Palindrome;
+package string;
 
 // #2
 
@@ -9,6 +9,8 @@ package Palindrome;
 Given a string s, find the longest palindromic subsequence's length in s.
 
 A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
+
+
 
 Example 1:
 
@@ -35,7 +37,6 @@ s consists only of lowercase English letters.
  - If characters are matching, increment the value low and decrement the value high by 1 and recur to find the LPS of new substring. And return the value result + 2.
  - Else make two recursive calls for (low + 1, hi) and (lo, hi-1).  And return the max of 2 calls.
  */
-
 public class LongestPalindromicSubsequence {
     // Time complexity 2^n
     // Time Limit Exceeded for large inputs
