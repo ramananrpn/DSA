@@ -1,6 +1,8 @@
-package string;
+package Palindrome;
 
 /* https://leetcode.com/problems/longest-palindromic-substring/ */
+
+// #3
 
 /* QUESTION
 Given a string s, return the longest palindromic substring in s.
