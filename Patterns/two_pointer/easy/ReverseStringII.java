@@ -1,4 +1,4 @@
-package two_pointer;
+package two_pointer.easy;
 
 
 /*
